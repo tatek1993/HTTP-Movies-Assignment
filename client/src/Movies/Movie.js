@@ -31,6 +31,18 @@ function Movie(props, { addToSavedList }) {
     props.history.push(`/update-movie/${movie.id}`);
   };
 
+  const handleDelete = e => {
+    e.preventDefault();
+    axios
+      .delete(`http://localhost:5000/api/movies/${movie.id}`)
+      .then(res=> {
+        props.refreshMovies();
+        props.history.push('/')
+      })
+      .catch(err => console.log(err))
+
+  }
+
   return (
     <div className='save-wrapper'>
       <MovieCard movie={movie} />
@@ -40,6 +52,9 @@ function Movie(props, { addToSavedList }) {
       </div>
       <button className="update-button" onClick={handleUpdate}>
         Edit
+      </button>
+      <button className="delete-button" onClick={handleDelete}>
+        Delete
       </button>
     </div>
   );
