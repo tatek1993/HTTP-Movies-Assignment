@@ -3,10 +3,31 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #f2f2f2;
+  text-decoration: none;
+  background-image: url(./images/popcorn-bg.jpg);
+  background-repeat: repeat;
 }
+button {
 
+  border: 3px solid rgba(12, 47, 40, 0.807);
+  padding: 5px 10px;
+  background-color: lightseagreen;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(12, 47, 40, 0.807);
+  border-radius: 3px;
+  font-size: 1.3rem;
+  
+
+}
+button:hover {
+  background-color: green;
+  color: white;
+}
 .movie-card {
-  background-color: #fff;
+  background-color: rgba(163, 255, 224, 0.979);
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
@@ -14,11 +35,13 @@ body {
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+  text-decoration: none;
 }
 
 .movie-director {
   padding: 4px 0;
   font-size: 0.8rem;
+  text-decoration: none;
 }
 
 .saved-list {
@@ -57,12 +80,21 @@ body {
   position: absolute;
   top: 25px;
   right: 25px;
-  border: 1px solid grey;
-  padding: 5px 10px;
-  background-color: lightseagreen;
 }
-.save-button:hover {
-  background-color: green;
+
+.update-button {
+  position: absolute;
+  top: 70px;
+  right: 25px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 115px;
+  right: 25px;
+}
+.delete-button:hover {
+  background-color: red;
   color: white;
 }
 
